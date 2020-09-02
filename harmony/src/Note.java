@@ -1,59 +1,20 @@
-import java.util.Arrays;
+public enum Note {
+    A("A"), ASHARP("A#"), ADOUBLESHARP("A##"), AFLAT("Ab"), ADOUBLEFLAT("Abb"),
+    B("B"), BSHARP("B#"), BDOUBLESHARP("B##"), BFLAT("Bb"), BDOUBLEFLAT("Bbb"),
+    C("C"), CSHARP("C#"), CDOUBLESHARP("C##"), CFLAT("Cb"), CDOUBLEFLAT("Cbb"),
+    D("D"), DSHARP("D#"), DDOUBLESHARP("D##"), DFLAT("Db"), DDOUBLEFLAT("Dbb"),
+    E("E"), ESHARP("E#"), EDOUBLESHARP("E##"), EFLAT("Eb"), EDOUBLEFLAT("Ebb"),
+    F("F"), FSHARP("F#"), FDOUBLESHARP("F##"), FFLAT("Fb"), FDOUBLEFLAT("Fbb"),
+    G("G"), GSHARP("G#"), GDOUBLESHARP("G##"), GFLAT("Gb"), GDOUBLEFLAT("Gbb");
 
-public class Note {
+    private final String note_name;
 
-    private String name;
-    private int tone;
-
-    public static String[] noteNames = {
-            "C", "B#", "Dbb",
-            "C#", "Db", "B##",
-            "D", "C##", "Ebb",
-            "D#", "Eb", "Fbb",
-            "E", "D##", "Fb",
-            "F", "E#", "Gbb",
-            "F#", "E##", "Gb",
-            "G", "F##", "Abb",
-            "G#", "Ab",
-            "A", "G##", "Bbb",
-            "A#", "Bb", "Cbb",
-            "B", "A##", "Cb"
-    };
-
-    public Note(String name) {
-        this.name = name.toUpperCase();
-        if (Arrays.asList(noteNames).contains(this.name)) {
-            throw new IllegalArgumentException("Improper Note Name: '" + name + "'");
-        }
-        this.tone = Note.tone_from_name(this.name);
+    Note(String s) {
+        note_name = s;
     }
 
-    public Note(int tone) {
-        this.tone = tone;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name.toUpperCase();
-        if (Arrays.asList(noteNames).contains(this.name)) {
-            throw new IllegalArgumentException("Improper Note Name: '" + name + "'");
-        }
-        this.tone = Note.tone_from_name(this.name);
-    }
-
-    public int getTone() {
-        return tone;
-    }
-
-    public static int tone_from_name(String name) {
-
-        int tone;
-        name = name.toUpperCase();
-
-        tone = switch (name) {
+    public int tone() {
+        return switch (note_name) {
             case "C", "B#", "Dbb" -> 0;
             case "C#", "Db", "B##" -> 1;
             case "D", "C##", "Ebb" -> 2;
@@ -66,8 +27,11 @@ public class Note {
             case "A", "G##", "Bbb" -> 9;
             case "A#", "Bb", "Cbb" -> 10;
             case "B", "A##", "Cb" -> 11;
-            default -> throw new IllegalArgumentException("Improper Note Name: '" + name + "'");
+            default -> throw new IllegalArgumentException("Improper Note Name: '" + note_name + "'");
         };
-        return tone;
+    }
+
+    public String toString() {
+        return note_name;
     }
 }
