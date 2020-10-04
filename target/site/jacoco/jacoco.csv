@@ -1,0 +1,12 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+overtone,default,Interval.Distance,96,0,0,0,13,0,4,0,4,0
+overtone,default,TEst,65,0,4,0,10,0,4,0,2,0
+overtone,default,Note,441,0,13,0,26,0,16,0,4,0
+overtone,default,Interval.Quality,103,0,0,0,13,0,3,0,3,0
+overtone,default,Interval,423,0,66,0,122,0,64,0,20,0
+overtone,com.overtone.server,MicroServer,179,0,4,0,54,0,12,0,10,0
+overtone,com.overtone.server,WebApplication,26,74,2,8,7,13,3,7,2,3
+overtone,com.overtone.requests,RequestConfig,0,39,0,0,0,12,0,4,0,4
+overtone,com.overtone.requests,RequestHeader,0,9,0,0,0,3,0,3,0,3
+overtone,com.overtone.misc,JSONValidator,17,70,0,0,3,13,1,2,1,2
+overtone,com.overtone.misc,BadRequestException,3,0,0,0,1,0,1,0,1,0

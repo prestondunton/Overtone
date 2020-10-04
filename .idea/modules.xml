@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Overtone.iml" filepath="$PROJECT_DIR$/.idea/Overtone.iml" />
-      <module fileurl="file://$PROJECT_DIR$/harmony/harmony.iml" filepath="$PROJECT_DIR$/harmony/harmony.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/overtone.iml" filepath="$PROJECT_DIR$/.idea/overtone.iml" />
     </modules>
   </component>
 </project>
